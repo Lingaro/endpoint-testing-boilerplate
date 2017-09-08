@@ -1,0 +1,20 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "ordered-imports": false,
+        "interface-name": [
+            "never-prefix"
+        ],
+        "object-literal-sort-keys": false,
+        "array-type": [
+            "array-simple"
+        ],
+        "arrow-parens": false,
+        "quotemark": [
+            false
+        ],
+        "no-empty-interface": false,
+        "no-string-literal": false,
+        "only-arrow-functions": true
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "enpoint-testing",
+  "version": "1.0.0",
+  "license": "UNLICENCED",
+  "scripts": {
+    "test": "npm-run-all -p lint jest",
+    "jest": "jest",
+    "lint": "tslint 'src/**/*.ts' --format stylish",
+    "start": "jest --watch --notify"
+  },
+  "dependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/rest": "^1.3.28",
+    "jest": "^21.0.1",
+    "npm-run-all": "^4.1.1",
+    "rest": "^2.0.0",
+    "ts-jest": "^21.0.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testURL": "http://package.json/testURL"
+  }
+}
