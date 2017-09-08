@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "license": "UNLICENCED",
   "scripts": {
-    "test": "npm-run-all -p lint jest",
-    "jest": "jest",
-    "lint": "tslint 'src/**/*.ts' --format stylish",
-    "start": "jest --watch --notify"
+    "test": "cross-env URL=https://jsonplaceholder.typicode.com jest --ci",
+    "start": "cross-env URL=https://jsonplaceholder.typicode.com jest --watch --notify",
+    "lint": "tslint 'src/**/*.ts' --format stylish"
   },
   "dependencies": {
     "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
     "@types/rest": "^1.3.28",
+    "cross-env": "^5.0.5",
     "jest": "^21.0.1",
-    "npm-run-all": "^4.1.1",
     "rest": "^2.0.0",
     "ts-jest": "^21.0.0",
     "tslint": "^5.7.0",
@@ -29,6 +29,6 @@
       "ts",
       "js"
     ],
-    "testURL": "http://package.json/testURL"
+    "testURL": "see: https://github.com/cujojs/rest/issues/135"
   }
 }
