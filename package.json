@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "license": "UNLICENCED",
   "scripts": {
-    "test": "cross-env URL=https://jsonplaceholder.typicode.com jest --ci",
-    "start": "cross-env URL=https://jsonplaceholder.typicode.com jest --watch --notify",
+    "build": "tsc",
+    "test": "cross-env TARGET=dev jest --ci",
+    "start": "cross-env TARGET=dev jest --watch --notify",
     "lint": "tslint 'src/**/*.ts' --format stylish"
+  },
+  "servers":{
+    "dev": "https://jsonplaceholder.typicode.com"
   },
   "dependencies": {
     "@types/jest": "^20.0.8",
